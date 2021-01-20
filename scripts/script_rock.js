@@ -14,20 +14,33 @@ if (((you === 1) && ((randPC === 2) || (randPC === 4)))
     || ((you === 4) && ((randPC === 5) || (randPC === 3)))
     || ((you === 5) && ((randPC === 2) || (randPC === 1)))
 ) {
-    alert('Вы победили! Компьютер загадал: ' + texting(randPC) + ', а вы загадали: ' + texting(you) + '.')
+    alert('Вы победили! Компьютер загадал: ' + texting(randPC) + ', а вы загадали: ' + texting(you) + '.');
+    window.location.reload();
 } else if (you === randPC) {
-    alert('НИЧЬЯШЕЧКА!!!')
+    alert('НИЧЬЯШЕЧКА!!!');
+    window.location.reload();
 } else {
-    alert('Вы проиграли! Компьютер загадал: ' + texting(randPC) + ', а вы загадали: ' + texting(you) + '.')
+    alert('Вы проиграли! Компьютер загадал: ' + texting(randPC) + ', а вы загадали: ' + texting(you) + '.');
+    window.location.reload();
 }
 
 function texting(number) {
     switch (number) {
-        case 1: return 'Камень';
-        case 2: return 'Ножницы';
-        case 3: return 'Бумага';
-        case 4: return 'Ящерица';
-        case 5: return 'Спок';
+        case 1:
+            return 'Камень';
+            break;
+        case 2:
+            return 'Ножницы';
+            break;
+        case 3:
+            return 'Бумага';
+            break;
+        case 4:
+            return 'Ящерица';
+            break;
+        case 5:
+            return 'Спок';
+            break;
     }
 }
 

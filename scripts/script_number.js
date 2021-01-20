@@ -1,4 +1,5 @@
-let rand, you;
+let rand, you, c;
+c = 0;
 game()
 
 function game() {
@@ -15,13 +16,15 @@ function randomInteger(min, max) {
 
 function numb_check() {
     if (rand === you){
-        alert ('молодец, угадал');
+        alert ('молодец, угадал. Число попыток ' + c);
         game();
     } else if (you > rand){
         you = + prompt('ваше число больше загаданного, попробуйте еще раз');
+        c++;
         numb_check();
     } else {
         you = + prompt('ваше число меньше загаданного, попробуйте еще раз');
+        c++;
         numb_check();
     }
 }
